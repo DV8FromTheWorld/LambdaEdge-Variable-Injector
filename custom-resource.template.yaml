@@ -1,0 +1,15 @@
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  ResourceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: 'lambda-edge-environment-variable-injector'
+      Runtime: node14.x
+      CodeUri: lambda
+      Handler: index.handler
+      # Note: It is expected that the engineer will limit the access that this function has access to by way
+      #       modifying the attached policies to only allow S3 READ and WRITE access to the specific buckets
+      #       and bucket paths that are intended to be used by this utility. However, for demonstration simplicity,
+      #       we have granted full access.
+      Policies: AmazonS3FullAccess

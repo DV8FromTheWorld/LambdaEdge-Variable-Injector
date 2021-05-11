@@ -1,0 +1,16 @@
+{
+  "name": "lambda-edge-variable-injector",
+  "version": "1.0.0",
+  "description": "A simple custom resource for adding environment variable support to Lambda@Edge.",
+  "main": "index.js",
+  "author": "Austin Keener <keeneraustin@yahoo.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/DV8FromTheWorld/LambdaEdge-Variable-Injector"
+  },
+  "dependencies": {
+    "jszip": "^3.1.5",
+    "safe-cfn-custom-resource": "^1.0.3",
+    "stream-buffers": "^3.0.2"
+  }
+}
